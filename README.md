@@ -1,0 +1,2 @@
+# Inverse_Kinematics_CppOOP_Implementation_and_Simulation_7DOF_Robot
+This repository contains an object-oriented implementation of a solution to the inverse kinematics problem of a robotic manipulator using the BFGS optimization algorithm in C++. The algorithm is implemented as an S-function and applied in a simulation in Matlab Simulink, demonstrated on the KUKA iiwa robotic manipulator with 7 degrees of freedom.
