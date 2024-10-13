@@ -112,6 +112,7 @@
         } else {
 
             if (A.data[0][0] - A.data[1][1] > h && A.data[0][0] - A.data[2][2] > h) {
+                
                 double s = 2.0 * std::sqrt(1.0 + A.data[0][0] - A.data[1][1] - A.data[2][2]);
                 Q.s = (A.data[2][1] - A.data[1][2]) / s;
                 Q.v[0] = 0.25 * s;
