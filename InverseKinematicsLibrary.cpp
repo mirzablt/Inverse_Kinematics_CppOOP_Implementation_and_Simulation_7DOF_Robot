@@ -352,7 +352,9 @@
     
     /* Metod zoom implementira algoritam 3.6 (str. 61: J. Nocedal, S. J. Wright. Numerical
        Optimization. Springer, 2006.). Ovaj metod se poziva u  metodu strongWolfeLineSearch
-       koji implemetira jednodimenzionalno pretrazivanje zasnovano na Wolfe uslovima (2.25). */
+       koji implemetira jednodimenzionalno pretrazivanje zasnovano na Wolfe uslovima (2.25). 
+       Ova mmetoda i met. strongWolfeLineSearc je implementirana koristeci impl. u Matlab-u:
+       https://github.com/hiroyuki-kasai/GDLibrary/blob/master/line_search/strong_wolfe_line_search.m */
     
     void OnedimensionalLineSearch::zoom(double( *f)(HTMatrix&, const HTMatrix&, const ColumnVector&),
                                         HTMatrix& dh, const HTMatrix& dp_htm, const ColumnVector& x0,
