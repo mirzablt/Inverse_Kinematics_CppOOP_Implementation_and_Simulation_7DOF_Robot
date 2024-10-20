@@ -1,8 +1,4 @@
 
-/*
- * Include Files
- *
- */
 #if defined(MATLAB_MEX_FILE)
 #include "tmwtypes.h"
 #include "simstruc_types.h"
@@ -11,34 +7,20 @@
 #endif
 
 
-
-/* %%%-SFUNWIZ_wrapper_includes_Changes_BEGIN --- EDIT HERE TO _END */
 #include <math.h>
 
 #include <MatrixLibrary.cpp>
 #include <InverseKinematicsLibrary.cpp>
-/* %%%-SFUNWIZ_wrapper_includes_Changes_END --- EDIT HERE TO _BEGIN */
+
 #define u_width 4
 #define y_width 1
 
-/*
- * Create external references here.  
- *
- */
-/* %%%-SFUNWIZ_wrapper_externs_Changes_BEGIN --- EDIT HERE TO _END */
-/* extern double func(double a); */
-/* %%%-SFUNWIZ_wrapper_externs_Changes_END --- EDIT HERE TO _BEGIN */
 
-/*
- * Output function
- *
- */
 void InverseKinematicsCppOOP_Outputs_wrapper(const real_T *Pose,
 			const real_T *Init,
 			real_T *Config,
 			real_T *CriterionValue)
 {
-/* %%%-SFUNWIZ_wrapper_Outputs_Changes_BEGIN --- EDIT HERE TO _END */
 /* Kod u narednim linijama je implementiran u bloku S-Function Builder u mapi Outputs.
    Sve linije koda koje prethode ovom komentaru su automatski generirane pritiskom 
    tastera Build u bloku S-Function Builder. 
@@ -103,7 +85,7 @@ void InverseKinematicsCppOOP_Outputs_wrapper(const real_T *Pose,
 	DH.data[3][0] = a4;        DH.data[3][1] = alpaha4;           DH.data[3][2] = d4;  
 	DH.data[4][0] = a5;        DH.data[4][1] = alpaha5;           DH.data[4][2] = d5;  
 	DH.data[5][0] = a6;        DH.data[5][1] = alpaha6;           DH.data[5][2] = d6;
-    DH.data[6][0] = a7;        DH.data[6][1] = alpaha7;           DH.data[6][2] = d7;
+        DH.data[6][0] = a7;        DH.data[6][1] = alpaha7;           DH.data[6][2] = d7;
  
     
     /* desiredPoseHTM - desired pose homogene tranformation matrix. To je matrica 
@@ -161,7 +143,6 @@ void InverseKinematicsCppOOP_Outputs_wrapper(const real_T *Pose,
     
     CostFunction costFunctionInstance;
     CriterionValue[0] =  costFunctionInstance.criterion(DH, desiredPoseHTM, robotCurrentConfiguration);
-/* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */
 }
 
 
